@@ -1,4 +1,4 @@
-main: me.duncanleo.spigot_plugin_base.App
-name: SpigotPluginBase
+main: me.duncanleo.mc_single_bed.App
+name: MCSingleBed
 version: '0.1'
 api: '1'

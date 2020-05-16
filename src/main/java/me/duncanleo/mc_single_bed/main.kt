@@ -2,6 +2,7 @@ package me.duncanleo.mc_single_bed
 
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
+import org.bukkit.event.Event
 import org.bukkit.event.EventHandler
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.event.Listener
@@ -34,6 +35,7 @@ class App : JavaPlugin(), Listener {
         }
         event.player.world.time = 0
         Bukkit.broadcastMessage("${ChatColor.GOLD}Rise and Shine! ${ChatColor.YELLOW}Brought to you by ${ChatColor.AQUA}${event.player.displayName}")
+        event.setUseBed(Event.Result.DENY)
       }
     }.runTaskLater(this, 20 * 10)
     playerTaskMap[event.player.uniqueId] = task
